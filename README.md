@@ -1,6 +1,6 @@
 ## 简介
 
-以jf前后端分离版（springboot3）为基底，融入springAI的项目，个人练手使用，并无他意
+基于若依前后端分离版[RuoYi-Vue](https://gitee.com/y_project/RuoYi-Vue),引入spring-ai开发
 
 ## 内置功能
 1.  用户管理：用户是系统操作者，该功能主要完成系统用户配置。
