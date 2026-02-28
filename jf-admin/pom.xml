@@ -53,6 +53,16 @@
             <groupId>com.jf</groupId>
             <artifactId>jf-generator</artifactId>
         </dependency>
+        <!-- mcp-client依赖 -->
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-starter-mcp-client-webflux</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-starter-model-deepseek</artifactId>
+        </dependency>
 
     </dependencies>
 

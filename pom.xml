@@ -14,7 +14,7 @@
     
     <properties>
         <jf.version>3.9.1</jf.version>
-        <spring-ai.version>2.0.0-M2</spring-ai.version>
+        <spring-ai.version>1.1.0-M1</spring-ai.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>17</java.version>
@@ -211,6 +211,7 @@
         <module>jf-quartz</module>
         <module>jf-generator</module>
         <module>jf-common</module>
+        <module>jf-mcp-server</module>
     </modules>
     <packaging>pom</packaging>
 

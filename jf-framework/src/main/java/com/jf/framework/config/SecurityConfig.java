@@ -1,5 +1,9 @@
 package com.jf.framework.config;
 
+import com.jf.framework.config.properties.PermitAllUrlProperties;
+import com.jf.framework.security.filter.JwtAuthenticationTokenFilter;
+import com.jf.framework.security.handle.AuthenticationEntryPointImpl;
+import com.jf.framework.security.handle.LogoutSuccessHandlerImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,10 +18,6 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.authentication.logout.LogoutFilter;
 import org.springframework.web.filter.CorsFilter;
-import com.jf.framework.config.properties.PermitAllUrlProperties;
-import com.jf.framework.security.filter.JwtAuthenticationTokenFilter;
-import com.jf.framework.security.handle.AuthenticationEntryPointImpl;
-import com.jf.framework.security.handle.LogoutSuccessHandlerImpl;
 
 /**
  * spring security配置
@@ -100,7 +100,7 @@ public class SecurityConfig
             .authorizeHttpRequests((requests) -> {
                 permitAllUrl.getUrls().forEach(url -> requests.requestMatchers(url).permitAll());
                 // 对于登录login 注册register 验证码captchaImage 允许匿名访问
-                requests.requestMatchers("/login", "/register", "/captchaImage").permitAll()
+                requests.requestMatchers("/login", "/register", "/captchaImage","/api/**").permitAll()
                     // 静态资源，可匿名访问
                     .requestMatchers(HttpMethod.GET, "/", "/*.html", "/**.html", "/**.css", "/**.js", "/profile/**").permitAll()
                     .requestMatchers("/swagger-ui.html", "/v3/api-docs/**", "/swagger-ui/**", "/druid/**").permitAll()

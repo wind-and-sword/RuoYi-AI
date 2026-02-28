@@ -57,14 +57,14 @@ spring:
   servlet:
     multipart:
       # 单个文件大小
-      max-file-size: 10MB
+      max-file-size: 200MB
       # 设置总上传的文件大小
-      max-request-size: 20MB
+      max-request-size: 200MB
   # 服务模块
   devtools:
     restart:
       # 热部署开关
-      enabled: true
+      enabled: false
   data:
     # redis 配置
     redis:
@@ -88,6 +88,23 @@ spring:
           max-active: 8
           # #连接池最大阻塞等待时间（使用负值表示没有限制）
           max-wait: -1ms
+  ai:
+    deepseek:
+      base-url: http://192.168.0.67:8001/v1
+      chat:
+        options:
+          model: qwen3:32b
+      api-key: empty
+    mcp:
+      client:
+        type: ASYNC
+        request-timeout: 60s
+        toolcallback:
+          enabled: true
+        sse:
+          connections:
+            mcp-server:
+              url: http://localhost:9100/
 
 # token配置
 token:

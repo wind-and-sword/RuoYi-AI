@@ -58,6 +58,10 @@
             <groupId>com.jf</groupId>
             <artifactId>jf-system</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webflux</artifactId>
+        </dependency>
 
     </dependencies>
 
